@@ -6,6 +6,7 @@ class App extends React.Component {
     const anecdotes = this.props.store.getState()
     return (
       <div>
+        <h2>Anecdotes</h2>
         {anecdotes.map(anecdote=>
           <div key={anecdote.id}>
             <div>
@@ -17,6 +18,11 @@ class App extends React.Component {
             </div>
           </div>
         )}
+        <h2>create new</h2>
+        <form>
+          <div><input /></div>
+          <button>create</button> 
+        </form>
       </div>
     )
   }
